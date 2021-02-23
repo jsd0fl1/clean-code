@@ -11,7 +11,7 @@ def get_file(filepath):
         p_location = int(filepath.rindex('/'))
     except:
         p_location = -1
-    dirName = ''
+
     if p_location >= 0:
         dirName = filepath[0: p_location + 1]
     else:
