@@ -1,6 +1,3 @@
-import re
-
-
 def get_directory_name(filepath: str):
     if '/' not in filepath:
         return ""
