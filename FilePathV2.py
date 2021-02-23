@@ -4,7 +4,7 @@ import re
 # Get the File path E.g. log/cups/
 # sFile is the file path
 def get_file(filepath):
-    if len(filepath) > 0 and filepath[len(filepath) - 1] == '/':
+    if len(filepath) > 0 and filepath.endswith('/'):
         return filepath
 
     try:
