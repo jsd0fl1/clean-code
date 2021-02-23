@@ -34,7 +34,9 @@ def get_filename_part(filepath):
     return base_name
 
 
-#.png
+# Get the file extension of a file (e.g 'image.png' -> 'png')
+#  filepath -> the whole path to the file
+#  return   -> the extension of the file
 def get_extension_part(filepath):
     try:
         occurrences = [m.start() for m in re.finditer('\.', filepath)]
