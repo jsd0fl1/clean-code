@@ -19,6 +19,7 @@ def get_file(filepath):
 
     return dirName
 
+
 # This function gets the file
 def get_filename_part(filepath):
     try:
