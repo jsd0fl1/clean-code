@@ -20,7 +20,9 @@ def get_file(filepath):
     return dir_name
 
 
-# This function gets the file
+# Get the filename of a file path
+#  filepath -> the whole path to the file
+#  return   -> the filename without the path to the directory
 def get_filename_part(filepath):
     try:
         int(filepath.rindex('/'))
