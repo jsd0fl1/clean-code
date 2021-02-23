@@ -8,16 +8,16 @@ def get_file(filepath):
         return filepath
 
     try:
-        p_location = int(filepath.rindex('/'))
+        location = int(filepath.rindex('/'))
     except:
-        p_location = -1
+        location = -1
 
-    if p_location >= 0:
-        dirName = filepath[0: p_location + 1]
+    if location >= 0:
+        dir_name = filepath[0: location + 1]
     else:
-        dirName = '' #sFilename
+        dir_name = '' #sFilename
 
-    return dirName
+    return dir_name
 
 
 # This function gets the file
