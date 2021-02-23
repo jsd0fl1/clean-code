@@ -12,7 +12,6 @@ def get_file(filepath):
     except:
         p_location = -1
     dirName = ''
-    # Karl what is this?
     if p_location >= 0:
         dirName = filepath[0: p_location + 1]
     else:
