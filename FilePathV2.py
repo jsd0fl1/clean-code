@@ -1,8 +1,8 @@
 import re
 
-
-# Get the File path E.g. log/cups/
-# sFile is the file path
+# Get the directory path of a file path
+#  filepath -> the whole path to the file
+#  return   -> the directory name without the filename
 def get_file(filepath):
     if len(filepath) > 0 and filepath.endswith('/'):
         return filepath
