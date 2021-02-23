@@ -1,24 +1,10 @@
 import re
 
-# Get the directory path of a file path
-#  filepath -> the whole path to the file
-#  return   -> the directory name without the filename
-def get_file(filepath):
-    if len(filepath) > 0 and filepath.endswith('/'):
-        return filepath
+def get_directory_name(filepath: str):
+    if '/' not in filepath:
+        return ""
 
-    try:
-        location = int(filepath.rindex('/'))
-    except:
-        location = -1
-
-    if location >= 0:
-        dir_name = filepath[0: location + 1]
-    else:
-        dir_name = '' #sFilename
-
-    return dir_name
-
+    return filepath[0: filepath.rindex('/') + 1]
 
 # Get the filename of a file path
 #  filepath -> the whole path to the file
@@ -47,10 +33,10 @@ def get_extension_part(filepath):
     return ''
 
 
-assert(get_file("log/cups/access_log") == "log/cups/")
-assert(get_file("log/cups/") == "log/cups/")
-assert(get_file("cups/access_log") == "cups/")
-assert(get_file("access_log") == "")
+assert(get_directory_name("log/cups/access_log") == "log/cups/")
+assert(get_directory_name("log/cups/") == "log/cups/")
+assert(get_directory_name("cups/access_log") == "cups/")
+assert(get_directory_name("access_log") == "")
 assert(get_filename_part("log/cups/access_log") == "access_log")
 assert(get_filename_part("log/cups/") == "")
 assert(get_filename_part("cups/access_log") == "access_log")
